@@ -12,7 +12,7 @@ You are given an array of distinct integers A, you have to find and return all e
 
 NOTE: The result should have the order in which they are present in the original array.
  */
-public interface AtLeastTwoGreaterElements {
+public class AtLeastTwoGreaterElements {
 
     public static void solve(int[] A) {
 
