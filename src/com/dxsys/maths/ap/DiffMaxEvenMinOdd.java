@@ -1,0 +1,102 @@
+package com.dxsys.maths.ap;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+/*
+Problem Description
+
+You are given an array of integers A of size N.
+Return the difference between the maximum among all even numbers of A and the minimum among all odd numbers in A.
+
+
+
+Problem Constraints
+2 <= N <= 1e5
+-1e9 <= A[i] <= 1e9
+There is atleast 1 odd and 1 even number in A
+
+
+
+Input Format
+The first argument given is the integer array, A.
+
+
+
+Output Format
+Return maximum among all even numbers of A - minimum among all odd numbers in A.
+
+
+
+Example Input
+Input 1:
+
+ A = [0, 2, 9]
+ 3 0 2 9
+Input 2:
+
+ A = [5, 17, 100, 1]
+ 4 5 17 100 1
+
+
+Example Output
+Output 1:
+
+-7
+Output 2:
+
+99
+
+
+Example Explanation
+Explanation 1:
+
+Maximum of all even numbers = 2
+Minimum of all odd numbers = 9
+ans = 2 - 9 = -7
+Explanation 2:
+
+Maximum of all even numbers = 100
+Minimum of all odd numbers = 1
+ans = 100 - 1 = 99
+ */
+public class DiffMaxEvenMinOdd {
+
+    public int solve(ArrayList<Integer> A) {
+        Collections.sort(A);
+        int maxOfEven = 0;
+        int minOfOdd = 0;
+
+        for (int i=A.size()-1;i>0;i--){
+            if(A.get(i)%2 == 0){
+                maxOfEven =  A.get(i);
+                break;
+            }
+        }
+        for (int i=0;i<A.size();i++){
+            if(!(A.get(i)%2 == 0)){
+                minOfOdd =  A.get(i);
+                break;
+            }
+        }
+
+        return maxOfEven - minOfOdd;
+    }
+
+    public static void main(String[] args) {
+        int n;
+        DiffMaxEvenMinOdd obj = new DiffMaxEvenMinOdd();
+
+        System.out.println("Enter Number of elements of array");
+        Scanner input = new Scanner(System.in);
+        n = input.nextInt();
+
+        ArrayList<Integer> num = new ArrayList<>();
+        for (int i = 0; i < n; i++){
+            num.add(input.nextInt());
+        }
+        System.out.println(obj.solve(num));
+
+    }
+}
