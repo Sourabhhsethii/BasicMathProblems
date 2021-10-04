@@ -1,9 +1,4 @@
-package com.dxsys.maths.ap;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
+package com.dxsys.maths.timecomplexity;
 
 /*
 Smaller and Greater

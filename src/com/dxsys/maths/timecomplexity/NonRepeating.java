@@ -1,4 +1,4 @@
-package com.dxsys.maths.ap;
+package com.dxsys.maths.timecomplexity;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.dxsys.maths.ap;
+package com.dxsys.maths.bit;
 
 import java.util.Scanner;
 
