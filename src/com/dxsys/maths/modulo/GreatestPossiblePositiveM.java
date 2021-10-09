@@ -61,7 +61,7 @@ import java.util.Scanner;
  */
 public class GreatestPossiblePositiveM {
 
-    // Brute Force Approach
+    // Brute Force Approach // T.C = O(n) & S.C = O(1)
     public static int solve(int A, int B) {
         int m=1;
         for(int i=Integer.MAX_VALUE;i>1;i--){
@@ -73,6 +73,7 @@ public class GreatestPossiblePositiveM {
         return m;
     }
 
+    // T.C = O(1) & S.C = O(1)
     public static int solveOptimize(int A, int B) {
         int m=1;
 
